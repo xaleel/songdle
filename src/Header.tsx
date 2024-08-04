@@ -50,6 +50,11 @@ export default function Header({
 				label: "Contact me",
 				onClick: () => window.open("mailto:songdle@khaleeljaber.com"),
 			},
+			{
+				icon: "gh",
+				label: "Source code",
+				onClick: () => window.open("https://github.com/xaleel/songdle"),
+			},
 		],
 		[]
 	);
