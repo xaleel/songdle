@@ -1,5 +1,6 @@
 import { Game } from "./util";
 
+// Yes, my friend, there is no DB. Everything is static.
 export const GAMES: Record<string, Game> = {
 	B1: {
 		gameTitle: "Bonus #1",

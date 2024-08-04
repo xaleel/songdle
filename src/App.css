@@ -174,15 +174,6 @@ header {
 	align-items: center;
 }
 
-@keyframes fadein {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
 @keyframes nod {
 	from {
 		transform: rotate(10deg);
