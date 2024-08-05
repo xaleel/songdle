@@ -254,8 +254,1007 @@ export const AVG = {
 	ZWE: [-20.0, 30.0],
 };
 
+export const ISO3166: Record<string, { name: string; alpha2: string }> = {
+	AFG: {
+		name: "Afghanistan",
+		alpha2: "AF",
+	},
+	ALB: {
+		name: "Albania",
+		alpha2: "AL",
+	},
+	DZA: {
+		name: "Algeria",
+		alpha2: "DZ",
+	},
+	ASM: {
+		name: "American Samoa",
+		alpha2: "AS",
+	},
+	AND: {
+		name: "Andorra",
+		alpha2: "AD",
+	},
+	AGO: {
+		name: "Angola",
+		alpha2: "AO",
+	},
+	AIA: {
+		name: "Anguilla",
+		alpha2: "AI",
+	},
+	ATA: {
+		name: "Antarctica",
+		alpha2: "AQ",
+	},
+	ATG: {
+		name: "Antigua and Barbuda",
+		alpha2: "AG",
+	},
+	ARG: {
+		name: "Argentina",
+		alpha2: "AR",
+	},
+	ARM: {
+		name: "Armenia",
+		alpha2: "AM",
+	},
+	ABW: {
+		name: "Aruba",
+		alpha2: "AW",
+	},
+	AUS: {
+		name: "Australia",
+		alpha2: "AU",
+	},
+	AUT: {
+		name: "Austria",
+		alpha2: "AT",
+	},
+	AZE: {
+		name: "Azerbaijan",
+		alpha2: "AZ",
+	},
+	BHS: {
+		name: "Bahamas",
+		alpha2: "BS",
+	},
+	BHR: {
+		name: "Bahrain",
+		alpha2: "BH",
+	},
+	BGD: {
+		name: "Bangladesh",
+		alpha2: "BD",
+	},
+	BRB: {
+		name: "Barbados",
+		alpha2: "BB",
+	},
+	BLR: {
+		name: "Belarus",
+		alpha2: "BY",
+	},
+	BEL: {
+		name: "Belgium",
+		alpha2: "BE",
+	},
+	BLZ: {
+		name: "Belize",
+		alpha2: "BZ",
+	},
+	BEN: {
+		name: "Benin",
+		alpha2: "BJ",
+	},
+	BMU: {
+		name: "Bermuda",
+		alpha2: "BM",
+	},
+	BTN: {
+		name: "Bhutan",
+		alpha2: "BT",
+	},
+	BOL: {
+		name: "Bolivia (Plurinational State of)",
+		alpha2: "BO",
+	},
+	BES: {
+		name: "Bonaire, Sint Eustatius and Saba",
+		alpha2: "BQ",
+	},
+	BIH: {
+		name: "Bosnia and Herzegovina",
+		alpha2: "BA",
+	},
+	BWA: {
+		name: "Botswana",
+		alpha2: "BW",
+	},
+	BVT: {
+		name: "Bouvet Island",
+		alpha2: "BV",
+	},
+	BRA: {
+		name: "Brazil",
+		alpha2: "BR",
+	},
+	IOT: {
+		name: "British Indian Ocean Territory",
+		alpha2: "IO",
+	},
+	BRN: {
+		name: "Brunei Darussalam",
+		alpha2: "BN",
+	},
+	BGR: {
+		name: "Bulgaria",
+		alpha2: "BG",
+	},
+	BFA: {
+		name: "Burkina Faso",
+		alpha2: "BF",
+	},
+	BDI: {
+		name: "Burundi",
+		alpha2: "BI",
+	},
+	CPV: {
+		name: "Cabo Verde",
+		alpha2: "CV",
+	},
+	KHM: {
+		name: "Cambodia",
+		alpha2: "KH",
+	},
+	CMR: {
+		name: "Cameroon",
+		alpha2: "CM",
+	},
+	CAN: {
+		name: "Canada",
+		alpha2: "CA",
+	},
+	CYM: {
+		name: "Cayman Islands",
+		alpha2: "KY",
+	},
+	CAF: {
+		name: "Central African Republic",
+		alpha2: "CF",
+	},
+	TCD: {
+		name: "Chad",
+		alpha2: "TD",
+	},
+	CHL: {
+		name: "Chile",
+		alpha2: "CL",
+	},
+	CHN: {
+		name: "China",
+		alpha2: "CN",
+	},
+	CXR: {
+		name: "Christmas Island",
+		alpha2: "CX",
+	},
+	CCK: {
+		name: "Cocos (Keeling) Islands",
+		alpha2: "CC",
+	},
+	COL: {
+		name: "Colombia",
+		alpha2: "CO",
+	},
+	COM: {
+		name: "Comoros",
+		alpha2: "KM",
+	},
+	COD: {
+		name: "Congo",
+		alpha2: "CD",
+	},
+	COG: {
+		name: "Congo",
+		alpha2: "CG",
+	},
+	COK: {
+		name: "Cook Islands",
+		alpha2: "CK",
+	},
+	CRI: {
+		name: "Costa Rica",
+		alpha2: "CR",
+	},
+	HRV: {
+		name: "Croatia",
+		alpha2: "HR",
+	},
+	CUB: {
+		name: "Cuba",
+		alpha2: "CU",
+	},
+	CUW: {
+		name: "Curaçao",
+		alpha2: "CW",
+	},
+	CYP: {
+		name: "Cyprus",
+		alpha2: "CY",
+	},
+	CZE: {
+		name: "Czechia",
+		alpha2: "CZ",
+	},
+	CIV: {
+		name: "Côte d'Ivoire",
+		alpha2: "CI",
+	},
+	DNK: {
+		name: "Denmark",
+		alpha2: "DK",
+	},
+	DJI: {
+		name: "Djibouti",
+		alpha2: "DJ",
+	},
+	DMA: {
+		name: "Dominica",
+		alpha2: "DM",
+	},
+	DOM: {
+		name: "Dominican Republic",
+		alpha2: "DO",
+	},
+	ECU: {
+		name: "Ecuador",
+		alpha2: "EC",
+	},
+	EGY: {
+		name: "Egypt",
+		alpha2: "EG",
+	},
+	SLV: {
+		name: "El Salvador",
+		alpha2: "SV",
+	},
+	GNQ: {
+		name: "Equatorial Guinea",
+		alpha2: "GQ",
+	},
+	ERI: {
+		name: "Eritrea",
+		alpha2: "ER",
+	},
+	EST: {
+		name: "Estonia",
+		alpha2: "EE",
+	},
+	SWZ: {
+		name: "Eswatini",
+		alpha2: "SZ",
+	},
+	ETH: {
+		name: "Ethiopia",
+		alpha2: "ET",
+	},
+	FLK: {
+		name: "Falkland Islands  [Malvinas]",
+		alpha2: "FK",
+	},
+	FRO: {
+		name: "Faroe Islands",
+		alpha2: "FO",
+	},
+	FJI: {
+		name: "Fiji",
+		alpha2: "FJ",
+	},
+	FIN: {
+		name: "Finland",
+		alpha2: "FI",
+	},
+	FRA: {
+		name: "France",
+		alpha2: "FR",
+	},
+	GUF: {
+		name: "French Guiana",
+		alpha2: "GF",
+	},
+	PYF: {
+		name: "French Polynesia",
+		alpha2: "PF",
+	},
+	ATF: {
+		name: "French Southern Territories",
+		alpha2: "TF",
+	},
+	GAB: {
+		name: "Gabon",
+		alpha2: "GA",
+	},
+	GMB: {
+		name: "Gambia",
+		alpha2: "GM",
+	},
+	GEO: {
+		name: "Georgia",
+		alpha2: "GE",
+	},
+	DEU: {
+		name: "Germany",
+		alpha2: "DE",
+	},
+	GHA: {
+		name: "Ghana",
+		alpha2: "GH",
+	},
+	GIB: {
+		name: "Gibraltar",
+		alpha2: "GI",
+	},
+	GRC: {
+		name: "Greece",
+		alpha2: "GR",
+	},
+	GRL: {
+		name: "Greenland",
+		alpha2: "GL",
+	},
+	GRD: {
+		name: "Grenada",
+		alpha2: "GD",
+	},
+	GLP: {
+		name: "Guadeloupe",
+		alpha2: "GP",
+	},
+	GUM: {
+		name: "Guam",
+		alpha2: "GU",
+	},
+	GTM: {
+		name: "Guatemala",
+		alpha2: "GT",
+	},
+	GGY: {
+		name: "Guernsey",
+		alpha2: "GG",
+	},
+	GIN: {
+		name: "Guinea",
+		alpha2: "GN",
+	},
+	GNB: {
+		name: "Guinea-Bissau",
+		alpha2: "GW",
+	},
+	GUY: {
+		name: "Guyana",
+		alpha2: "GY",
+	},
+	HTI: {
+		name: "Haiti",
+		alpha2: "HT",
+	},
+	HMD: {
+		name: "Heard Island and McDonald Islands",
+		alpha2: "HM",
+	},
+	VAT: {
+		name: "Holy See",
+		alpha2: "VA",
+	},
+	HND: {
+		name: "Honduras",
+		alpha2: "HN",
+	},
+	HKG: {
+		name: "Hong Kong",
+		alpha2: "HK",
+	},
+	HUN: {
+		name: "Hungary",
+		alpha2: "HU",
+	},
+	ISL: {
+		name: "Iceland",
+		alpha2: "IS",
+	},
+	IND: {
+		name: "India",
+		alpha2: "IN",
+	},
+	IDN: {
+		name: "Indonesia",
+		alpha2: "ID",
+	},
+	IRN: {
+		name: "Iran (Islamic Republic of)",
+		alpha2: "IR",
+	},
+	IRQ: {
+		name: "Iraq",
+		alpha2: "IQ",
+	},
+	IRL: {
+		name: "Ireland",
+		alpha2: "IE",
+	},
+	IMN: {
+		name: "Isle of Man",
+		alpha2: "IM",
+	},
+	ISR: {
+		name: "Israel",
+		alpha2: "IL",
+	},
+	ITA: {
+		name: "Italy",
+		alpha2: "IT",
+	},
+	JAM: {
+		name: "Jamaica",
+		alpha2: "JM",
+	},
+	JPN: {
+		name: "Japan",
+		alpha2: "JP",
+	},
+	JEY: {
+		name: "Jersey",
+		alpha2: "JE",
+	},
+	JOR: {
+		name: "Jordan",
+		alpha2: "JO",
+	},
+	KAZ: {
+		name: "Kazakhstan",
+		alpha2: "KZ",
+	},
+	KEN: {
+		name: "Kenya",
+		alpha2: "KE",
+	},
+	KIR: {
+		name: "Kiribati",
+		alpha2: "KI",
+	},
+	PRK: {
+		name: "North Korea",
+		alpha2: "KP",
+	},
+	KOR: {
+		name: "South Korea",
+		alpha2: "KR",
+	},
+	KWT: {
+		name: "Kuwait",
+		alpha2: "KW",
+	},
+	KGZ: {
+		name: "Kyrgyzstan",
+		alpha2: "KG",
+	},
+	LAO: {
+		name: "Lao People's Democratic Republic",
+		alpha2: "LA",
+	},
+	LVA: {
+		name: "Latvia",
+		alpha2: "LV",
+	},
+	LBN: {
+		name: "Lebanon",
+		alpha2: "LB",
+	},
+	LSO: {
+		name: "Lesotho",
+		alpha2: "LS",
+	},
+	LBR: {
+		name: "Liberia",
+		alpha2: "LR",
+	},
+	LBY: {
+		name: "Libya",
+		alpha2: "LY",
+	},
+	LIE: {
+		name: "Liechtenstein",
+		alpha2: "LI",
+	},
+	LTU: {
+		name: "Lithuania",
+		alpha2: "LT",
+	},
+	LUX: {
+		name: "Luxembourg",
+		alpha2: "LU",
+	},
+	MAC: {
+		name: "Macao",
+		alpha2: "MO",
+	},
+	MDG: {
+		name: "Madagascar",
+		alpha2: "MG",
+	},
+	MWI: {
+		name: "Malawi",
+		alpha2: "MW",
+	},
+	MYS: {
+		name: "Malaysia",
+		alpha2: "MY",
+	},
+	MDV: {
+		name: "Maldives",
+		alpha2: "MV",
+	},
+	MLI: {
+		name: "Mali",
+		alpha2: "ML",
+	},
+	MLT: {
+		name: "Malta",
+		alpha2: "MT",
+	},
+	MHL: {
+		name: "Marshall Islands",
+		alpha2: "MH",
+	},
+	MTQ: {
+		name: "Martinique",
+		alpha2: "MQ",
+	},
+	MRT: {
+		name: "Mauritania",
+		alpha2: "MR",
+	},
+	MUS: {
+		name: "Mauritius",
+		alpha2: "MU",
+	},
+	MYT: {
+		name: "Mayotte",
+		alpha2: "YT",
+	},
+	MEX: {
+		name: "Mexico",
+		alpha2: "MX",
+	},
+	FSM: {
+		name: "Micronesia (Federated States of)",
+		alpha2: "FM",
+	},
+	MDA: {
+		name: "Moldova",
+		alpha2: "MD",
+	},
+	MCO: {
+		name: "Monaco",
+		alpha2: "MC",
+	},
+	MNG: {
+		name: "Mongolia",
+		alpha2: "MN",
+	},
+	MNE: {
+		name: "Montenegro",
+		alpha2: "ME",
+	},
+	MSR: {
+		name: "Montserrat",
+		alpha2: "MS",
+	},
+	MAR: {
+		name: "Morocco",
+		alpha2: "MA",
+	},
+	MOZ: {
+		name: "Mozambique",
+		alpha2: "MZ",
+	},
+	MMR: {
+		name: "Myanmar",
+		alpha2: "MM",
+	},
+	NAM: {
+		name: "Namibia",
+		alpha2: "NA",
+	},
+	NRU: {
+		name: "Nauru",
+		alpha2: "NR",
+	},
+	NPL: {
+		name: "Nepal",
+		alpha2: "NP",
+	},
+	NLD: {
+		name: "Netherlands",
+		alpha2: "NL",
+	},
+	NCL: {
+		name: "New Caledonia",
+		alpha2: "NC",
+	},
+	NZL: {
+		name: "New Zealand",
+		alpha2: "NZ",
+	},
+	NIC: {
+		name: "Nicaragua",
+		alpha2: "NI",
+	},
+	NER: {
+		name: "Niger",
+		alpha2: "NE",
+	},
+	NGA: {
+		name: "Nigeria",
+		alpha2: "NG",
+	},
+	NIU: {
+		name: "Niue",
+		alpha2: "NU",
+	},
+	NFK: {
+		name: "Norfolk Island",
+		alpha2: "NF",
+	},
+	MNP: {
+		name: "Northern Mariana Islands",
+		alpha2: "MP",
+	},
+	NOR: {
+		name: "Norway",
+		alpha2: "NO",
+	},
+	OMN: {
+		name: "Oman",
+		alpha2: "OM",
+	},
+	PAK: {
+		name: "Pakistan",
+		alpha2: "PK",
+	},
+	PLW: {
+		name: "Palau",
+		alpha2: "PW",
+	},
+	PSE: {
+		name: "Palestine, State of",
+		alpha2: "PS",
+	},
+	PAN: {
+		name: "Panama",
+		alpha2: "PA",
+	},
+	PNG: {
+		name: "Papua New Guinea",
+		alpha2: "PG",
+	},
+	PRY: {
+		name: "Paraguay",
+		alpha2: "PY",
+	},
+	PER: {
+		name: "Peru",
+		alpha2: "PE",
+	},
+	PHL: {
+		name: "Philippines",
+		alpha2: "PH",
+	},
+	PCN: {
+		name: "Pitcairn",
+		alpha2: "PN",
+	},
+	POL: {
+		name: "Poland",
+		alpha2: "PL",
+	},
+	PRT: {
+		name: "Portugal",
+		alpha2: "PT",
+	},
+	PRI: {
+		name: "Puerto Rico",
+		alpha2: "PR",
+	},
+	QAT: {
+		name: "Qatar",
+		alpha2: "QA",
+	},
+	MKD: {
+		name: "Republic of North Macedonia",
+		alpha2: "MK",
+	},
+	ROU: {
+		name: "Romania",
+		alpha2: "RO",
+	},
+	RUS: {
+		name: "Russian Federation",
+		alpha2: "RU",
+	},
+	RWA: {
+		name: "Rwanda",
+		alpha2: "RW",
+	},
+	REU: {
+		name: "Réunion",
+		alpha2: "RE",
+	},
+	BLM: {
+		name: "Saint Barthélemy",
+		alpha2: "BL",
+	},
+	SHN: {
+		name: "Saint Helena, Ascension and Tristan da Cunha",
+		alpha2: "SH",
+	},
+	KNA: {
+		name: "Saint Kitts and Nevis",
+		alpha2: "KN",
+	},
+	LCA: {
+		name: "Saint Lucia",
+		alpha2: "LC",
+	},
+	MAF: {
+		name: "Saint Martin (French part)",
+		alpha2: "MF",
+	},
+	SPM: {
+		name: "Saint Pierre and Miquelon",
+		alpha2: "PM",
+	},
+	VCT: {
+		name: "Saint Vincent and the Grenadines",
+		alpha2: "VC",
+	},
+	WSM: {
+		name: "Samoa",
+		alpha2: "WS",
+	},
+	SMR: {
+		name: "San Marino",
+		alpha2: "SM",
+	},
+	STP: {
+		name: "Sao Tome and Principe",
+		alpha2: "ST",
+	},
+	SAU: {
+		name: "Saudi Arabia",
+		alpha2: "SA",
+	},
+	SEN: {
+		name: "Senegal",
+		alpha2: "SN",
+	},
+	SRB: {
+		name: "Serbia",
+		alpha2: "RS",
+	},
+	SYC: {
+		name: "Seychelles",
+		alpha2: "SC",
+	},
+	SLE: {
+		name: "Sierra Leone",
+		alpha2: "SL",
+	},
+	SGP: {
+		name: "Singapore",
+		alpha2: "SG",
+	},
+	SXM: {
+		name: "Sint Maarten (Dutch part)",
+		alpha2: "SX",
+	},
+	SVK: {
+		name: "Slovakia",
+		alpha2: "SK",
+	},
+	SVN: {
+		name: "Slovenia",
+		alpha2: "SI",
+	},
+	SLB: {
+		name: "Solomon Islands",
+		alpha2: "SB",
+	},
+	SOM: {
+		name: "Somalia",
+		alpha2: "SO",
+	},
+	ZAF: {
+		name: "South Africa",
+		alpha2: "ZA",
+	},
+	SGS: {
+		name: "South Georgia and the South Sandwich Islands",
+		alpha2: "GS",
+	},
+	SSD: {
+		name: "South Sudan",
+		alpha2: "SS",
+	},
+	ESP: {
+		name: "Spain",
+		alpha2: "ES",
+	},
+	LKA: {
+		name: "Sri Lanka",
+		alpha2: "LK",
+	},
+	SDN: {
+		name: "Sudan",
+		alpha2: "SD",
+	},
+	SUR: {
+		name: "Suriname",
+		alpha2: "SR",
+	},
+	SJM: {
+		name: "Svalbard and Jan Mayen",
+		alpha2: "SJ",
+	},
+	SWE: {
+		name: "Sweden",
+		alpha2: "SE",
+	},
+	CHE: {
+		name: "Switzerland",
+		alpha2: "CH",
+	},
+	SYR: {
+		name: "Syrian Arab Republic",
+		alpha2: "SY",
+	},
+	TWN: {
+		name: "Taiwan (Province of China)",
+		alpha2: "TW",
+	},
+	TJK: {
+		name: "Tajikistan",
+		alpha2: "TJ",
+	},
+	TZA: {
+		name: "Tanzania, United Republic of",
+		alpha2: "TZ",
+	},
+	THA: {
+		name: "Thailand",
+		alpha2: "TH",
+	},
+	TLS: {
+		name: "Timor-Leste",
+		alpha2: "TL",
+	},
+	TGO: {
+		name: "Togo",
+		alpha2: "TG",
+	},
+	TKL: {
+		name: "Tokelau",
+		alpha2: "TK",
+	},
+	TON: {
+		name: "Tonga",
+		alpha2: "TO",
+	},
+	TTO: {
+		name: "Trinidad and Tobago",
+		alpha2: "TT",
+	},
+	TUN: {
+		name: "Tunisia",
+		alpha2: "TN",
+	},
+	TUR: {
+		name: "Turkey",
+		alpha2: "TR",
+	},
+	TKM: {
+		name: "Turkmenistan",
+		alpha2: "TM",
+	},
+	TCA: {
+		name: "Turks and Caicos Islands",
+		alpha2: "TC",
+	},
+	TUV: {
+		name: "Tuvalu",
+		alpha2: "TV",
+	},
+	UGA: {
+		name: "Uganda",
+		alpha2: "UG",
+	},
+	UKR: {
+		name: "Ukraine",
+		alpha2: "UA",
+	},
+	ARE: {
+		name: "United Arab Emirates",
+		alpha2: "AE",
+	},
+	GBR: {
+		name: "United Kingdom of Great Britain and Northern Ireland",
+		alpha2: "GB",
+	},
+	UMI: {
+		name: "United States Minor Outlying Islands",
+		alpha2: "UM",
+	},
+	USA: {
+		name: "United States of America",
+		alpha2: "US",
+	},
+	URY: {
+		name: "Uruguay",
+		alpha2: "UY",
+	},
+	UZB: {
+		name: "Uzbekistan",
+		alpha2: "UZ",
+	},
+	VUT: {
+		name: "Vanuatu",
+		alpha2: "VU",
+	},
+	VEN: {
+		name: "Venezuela (Bolivarian Republic of)",
+		alpha2: "VE",
+	},
+	VNM: {
+		name: "Viet Nam",
+		alpha2: "VN",
+	},
+	VGB: {
+		name: "Virgin Islands (British)",
+		alpha2: "VG",
+	},
+	VIR: {
+		name: "Virgin Islands (U.S.)",
+		alpha2: "VI",
+	},
+	WLF: {
+		name: "Wallis and Futuna",
+		alpha2: "WF",
+	},
+	ESH: {
+		name: "Western Sahara",
+		alpha2: "EH",
+	},
+	YEM: {
+		name: "Yemen",
+		alpha2: "YE",
+	},
+	ZMB: {
+		name: "Zambia",
+		alpha2: "ZM",
+	},
+	ZWE: {
+		name: "Zimbabwe",
+		alpha2: "ZW",
+	},
+	ALA: {
+		name: "Åland Islands",
+		alpha2: "AX",
+	},
+};
+
 export const CODES = Object.keys(AVG);
 
-export const GAMES_SORTED = Object.values(GAMES).sort(
+export const GAMES_SORTED = GAMES.sort(
 	(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 );

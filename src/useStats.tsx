@@ -10,6 +10,7 @@ export default function useStat(songId: string, country: string) {
 			ts: new Date().getTime(),
 		}
 	);
+	const [justWon, setJustWon] = useState(false);
 
 	const save = (_stat: GameSession) => {
 		const _s = JSON.parse(localStorage.getItem("songdle_stats") || "{}");
@@ -21,6 +22,7 @@ export default function useStat(songId: string, country: string) {
 
 	useEffect(() => {
 		save(stat);
+		setJustWon(false);
 		setStat(
 			JSON.parse(localStorage.getItem("songdle_stats") || "{}")?.[
 				songId
@@ -40,6 +42,7 @@ export default function useStat(songId: string, country: string) {
 			guesses: [...stat.guesses, guess],
 		});
 		if (guess === country) {
+			setJustWon(true);
 			setStat({
 				...stat,
 				won: true,
@@ -47,5 +50,10 @@ export default function useStat(songId: string, country: string) {
 		}
 	};
 
-	return { stat: { ...stat }, addGuess };
+	return {
+		stat: { ...stat },
+		addGuess,
+		justWon,
+		dismiss: () => setJustWon(false),
+	};
 }

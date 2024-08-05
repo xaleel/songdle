@@ -87,6 +87,13 @@ body {
 	align-items: center;
 }
 
+.fl-ccn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .fl-acn {
 	display: flex;
 	align-items: center;
@@ -158,6 +165,7 @@ header {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(12px);
 	min-width: 250px;
+	z-index: 3;
 }
 
 .menu.active {
@@ -196,4 +204,26 @@ header {
 
 .game:hover {
 	transform: translateX(4px);
+}
+
+.hints {
+	height: 150px;
+	overflow-y: auto;
+	padding-inline-end: 24px;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	background: var(--fg);
+	color: var(--bg);
+}
+
+@media screen and (max-width: 768px) {
+	.g-3 {
+		grid-template-columns: 1fr;
+	}
 }
