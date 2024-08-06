@@ -72,17 +72,17 @@ const _GAMES: Game[] = [
 		country: "UKR",
 		date: "05 Aug 2024",
 	},
-	// TODO
 	{
 		gameTitle: "Daily #3 - 06 Aug 2024",
-		songTitle: "",
-		songId: "",
-		songBPM: 0,
-		artist: "",
-		language: "",
-		country: "",
+		songTitle: "Razna",
+		songId: "g4JPsYTS5ns",
+		songBPM: 125,
+		artist: "Emaa",
+		language: "Romanian",
+		country: "ROU",
 		date: "06 Aug 2024",
 	},
+	// TODO
 	{
 		gameTitle: "Daily #4 - 07 Aug 2024",
 		songTitle: "",
