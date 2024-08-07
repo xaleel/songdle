@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import { GAMES_SORTED, ISO3166 } from "./const";
 import Header from "./Header";
 import MapChart from "./MapChart";
 import useStat from "./useStats";
-import { loadMode } from "./util";
+import { cleanName, getDistance, loadMode } from "./util";
 import VideoPlayer from "./VideoPlayer";
 import Hints from "./Hints";
 import Dialog from "./Dialog";
@@ -12,6 +12,7 @@ import Icon from "./Icon";
 
 function App() {
 	const [game, setGame] = useState(GAMES_SORTED[0]);
+	const [distances, setDistances] = useState<[string, number][]>([]);
 	const [info, setInfo] = useState(false);
 
 	const { stat, addGuess, justWon, dismiss } = useStat(
@@ -21,27 +22,59 @@ function App() {
 
 	useEffect(loadMode, []);
 
+	useEffect(
+		() =>
+			setDistances(
+				stat.guesses.map((id) => [id, getDistance(id, game.country)])
+			),
+		[stat.guesses, game.country]
+	);
+
+	const _onGuess = (id: string, distance: number) => {
+		if (addGuess(id)) setDistances((d) => [...d, [id, distance]]);
+	};
+
+	const _distances = useMemo(
+		() =>
+			distances
+				.sort((a, b) => a[1] - b[1])
+				.map(([id]) => cleanName(ISO3166[id].name))
+				.join(" → "),
+		[distances]
+	);
+
 	return (
-		<div>
+		<div className="container">
 			<Header setGame={setGame} />
-			<div className="g-3">
-				<div className="fl-cn">
-					{stat.won && (
-						<button onClick={() => setInfo(true)}>
-							Show song info
-						</button>
+			<div className="g-3 pb-2">
+				<div className="px-2">
+					{distances.length > 0 && (
+						<p>
+							<b>Guesses (closest to farthest)</b>
+						</p>
 					)}
+					<div className="hints sb">{_distances}</div>
 				</div>
 				<div className="fl-ccn">
 					<h3 className="text-c mt-0">{game.gameTitle}</h3>
 					<VideoPlayer id={game.songId} bpm={game.songBPM} />
+					{stat.won && (
+						<div className="fl-cn" style={{ marginTop: "16px" }}>
+							<span style={{ marginInlineEnd: "16px" }}>
+								You won 🏆🎉
+							</span>
+							<button onClick={() => setInfo(true)}>
+								Show song info
+							</button>
+						</div>
+					)}
 				</div>
 				<Hints game={game} />
 			</div>
 			<MapChart
 				withTooltip
 				incorrect={stat.guesses}
-				onGuess={addGuess}
+				onGuess={_onGuess}
 				correct={stat.won ? [game.country] : undefined}
 			/>
 			{(justWon || info) && (

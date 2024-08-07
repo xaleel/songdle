@@ -1,3 +1,5 @@
+import { AVG } from "./const";
+
 export type Game = {
 	gameTitle: string;
 	songTitle: string;
@@ -28,6 +30,18 @@ export function loadMode() {
 	const mode = localStorage.getItem("songdle_mode") || "dark";
 	document.documentElement.setAttribute("data-mode", mode);
 	localStorage.setItem("songdle_mode", mode);
+}
+
+export function getDistance(c1Id: string, c2Id: string) {
+	const point1 = AVG[c1Id];
+	const point2 = AVG[c2Id];
+	const dx = point1[0] - point2[0];
+	const dy = point1[1] - point2[1];
+	return Math.sqrt(dx * dx + dy * dy);
+}
+
+export function cleanName(name: string) {
+	return name.replace(/\(.+\)/g, "");
 }
 
 export class DateExt extends Date {

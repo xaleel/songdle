@@ -26,13 +26,20 @@ export default function Hints({ game }: HintsProps) {
 	}, [hints]);
 
 	const _hints = useMemo(
-		() => [
-			`Artist: ${game.artist}`,
-			`Song title: ${game.songTitle}`,
-			`Language: ${game.language}`,
-			`Country first letter: ${ISO3166[game.country].name[0]}`,
-			`Country last letter: ${ISO3166[game.country].name.slice(-1)}`,
-		],
+		() =>
+			[
+				`Artist: ${game.artist}`,
+				`Song title: ${game.songTitle}`,
+				`Language: ${game.language}`,
+				`Country first letter: ${
+					ISO3166[game.country]?.name?.[0] ?? game.country[0]
+				}`,
+				ISO3166[game.country]
+					? `Country last letter: ${ISO3166[game.country].name.slice(
+							-1
+					  )}`
+					: null,
+			].filter(Boolean),
 		[game]
 	);
 

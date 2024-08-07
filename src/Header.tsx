@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Icon, { IconName } from "./Icon";
 import { DateExt, Game, GameSession, switchMode } from "./util";
 import Dialog from "./Dialog";
@@ -229,7 +229,7 @@ function DialogBody({
 					<br />
 					<br />
 					{GAMES_SORTED.map((game) => (
-						<>
+						<React.Fragment key={"arch-" + game.songId}>
 							<div
 								key={game.songId}
 								className="fl-b game"
@@ -246,7 +246,7 @@ function DialogBody({
 								<p className="mt-0">{getAttempted(game)}</p>
 							</div>
 							<br />
-						</>
+						</React.Fragment>
 					))}
 				</div>
 			);

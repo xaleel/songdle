@@ -1,6 +1,6 @@
 import { GAMES } from "./games";
 
-export const AVG = {
+export const AVG: Record<string, [number, number]> = {
 	AFG: [33.0, 65.0],
 	ALA: [60.116667, 19.9],
 	ALB: [41.0, 20.0],

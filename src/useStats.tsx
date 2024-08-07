@@ -36,10 +36,12 @@ export default function useStat(songId: string, country: string) {
 	}, [songId]);
 
 	const addGuess = (guess: string) => {
-		if (stat.won || stat.guesses.includes(guess)) return;
+		if (stat.won || stat.guesses.includes(guess)) return false;
+		const _l = stat.guesses.length;
+		const guesses = [...stat.guesses, guess];
 		setStat({
 			...stat,
-			guesses: [...stat.guesses, guess],
+			guesses,
 		});
 		if (guess === country) {
 			setJustWon(true);
@@ -48,6 +50,7 @@ export default function useStat(songId: string, country: string) {
 				won: true,
 			});
 		}
+		return _l !== guesses.length;
 	};
 
 	return {

@@ -6,10 +6,11 @@ import {
 	ZoomableGroup,
 } from "react-simple-maps";
 import { AVG, CODES } from "./const";
+import { getDistance } from "./util";
 
 type MapChartProps = {
 	withTooltip: boolean;
-	onGuess: (id: string) => void;
+	onGuess: (id: string, distance: number) => void;
 	correct?: string[];
 	incorrect?: string[];
 };
@@ -43,17 +44,8 @@ const MapChart = ({
 		tt.current.style.display = "none";
 	};
 
-	const distance = (point1: number[], point2: number[]) => {
-		const dx = point1[0] - point2[0];
-		const dy = point1[1] - point2[1];
-		return Math.sqrt(dx * dx + dy * dy);
-	};
-
 	const onClick = (id: string & keyof typeof AVG) => {
-		const o = AVG[id];
-		const t = AVG[ans as keyof typeof AVG];
-		distance(o, t);
-		onGuess(id);
+		onGuess(id, getDistance(id, ans));
 	};
 
 	return (
