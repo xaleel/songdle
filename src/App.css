@@ -178,7 +178,7 @@ header {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(12px);
 	min-width: 250px;
-	z-index: 3;
+	z-index: 4;
 }
 
 .menu.active {
@@ -243,5 +243,13 @@ button {
 	.hints {
 		margin-top: 16px;
 		padding-inline: 24px;
+	}
+
+	.container {
+		height: unset;
+	}
+
+	.map {
+		min-height: 100vw;
 	}
 }

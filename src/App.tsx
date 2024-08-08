@@ -1,14 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import { GAMES_SORTED, ISO3166 } from "./const";
+import Dialog from "./Dialog";
 import Header from "./Header";
+import Hints from "./Hints";
+import Icon from "./Icon";
 import MapChart from "./MapChart";
 import useStat from "./useStats";
 import { cleanName, getDistance, loadMode } from "./util";
 import VideoPlayer from "./VideoPlayer";
-import Hints from "./Hints";
-import Dialog from "./Dialog";
-import Icon from "./Icon";
 
 function App() {
 	const [game, setGame] = useState(GAMES_SORTED[0]);
@@ -74,8 +74,8 @@ function App() {
 			<MapChart
 				withTooltip
 				incorrect={stat.guesses}
-				onGuess={_onGuess}
 				correct={stat.won ? [game.country] : undefined}
+				onGuess={_onGuess}
 			/>
 			{(justWon || info) && (
 				<Dialog
