@@ -235,6 +235,17 @@ button {
 	color: var(--bg);
 }
 
+.floatingchat-container-wrap,
+.floatingchat-container-wrap-mobi {
+	opacity: 0;
+	left: 22px;
+	bottom: 20px;
+}
+
+.floatingchat-container {
+	width: 201px;
+}
+
 @media screen and (max-width: 768px) {
 	.g-3 {
 		grid-template-columns: 1fr;

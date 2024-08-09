@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useState } from "react";
-import Icon, { IconName } from "./Icon";
-import { DateExt, Game, GameSession, switchMode } from "./util";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Dialog from "./Dialog";
+import Icon, { IconName } from "./Icon";
 import { GAMES_SORTED } from "./const";
+import { DateExt, Game, GameSession, switchMode } from "./util";
 
 const iconSize = 28;
 
@@ -27,6 +27,7 @@ export default function Header({
 }) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [dialog, setDialog] = useState<Dialogs>();
+	const menuContainer = useRef<HTMLDivElement>(null);
 
 	const items: MenuItem[] = useMemo(
 		() => [
@@ -60,11 +61,23 @@ export default function Header({
 	);
 
 	useEffect(() => {
-		if (!localStorage.getItem("songdle_init")) {
-			localStorage.setItem("songdle_init", "true");
-			setDialog("how");
-		}
-	}, []);
+		const donateBtns = document.querySelectorAll(
+			".floatingchat-container-wrap,.floatingchat-container-wrap-mobi"
+		);
+		donateBtns.forEach((btn) =>
+			btn.animate(
+				[
+					{ opacity: isMenuOpen ? 0 : 1 },
+					{ opacity: isMenuOpen ? 1 : 0 },
+				],
+				{
+					duration: isMenuOpen ? 200 : 100,
+					fill: "forwards",
+					delay: isMenuOpen ? 200 : 0,
+				}
+			)
+		);
+	}, [isMenuOpen]);
 
 	return (
 		<header>
@@ -87,7 +100,10 @@ export default function Header({
 					/>
 				</div>
 			</div>
-			<div className={"menu" + (isMenuOpen ? " active" : "")}>
+			<div
+				className={"menu" + (isMenuOpen ? " active" : "")}
+				ref={menuContainer}
+			>
 				<div className="fl-e menu-item b-0">
 					<Icon
 						name="x"

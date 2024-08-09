@@ -11,9 +11,18 @@
 			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
+		<script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
 	</head>
 	<body class="sb">
 		<div id="root"></div>
 		<script type="module" src="/src/main.tsx"></script>
+		<script>
+			kofiWidgetOverlay.draw("khaleeljaber", {
+				type: "floating-chat",
+				"floating-chat.donateButton.text": "Support me ❤️",
+				"floating-chat.donateButton.background-color": "#323842",
+				"floating-chat.donateButton.text-color": "#fff",
+			});
+		</script>
 	</body>
 </html>
