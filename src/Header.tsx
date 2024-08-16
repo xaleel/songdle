@@ -135,6 +135,7 @@ export default function Header({
 							setGame={(g) => {
 								setGame(g);
 								setDialog(undefined);
+								setIsMenuOpen(false);
 							}}
 						/>
 					}
