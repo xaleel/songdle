@@ -51,7 +51,7 @@ const MapChart = ({
 	return (
 		<div className="map">
 			<ComposableMap height={800}>
-				<ZoomableGroup zoom={1.5}>
+				<ZoomableGroup zoom={1.5} minZoom={1.5} maxZoom={20}>
 					<Geographies geography="/map.json">
 						{({ geographies }) =>
 							geographies.map((geo) => (
